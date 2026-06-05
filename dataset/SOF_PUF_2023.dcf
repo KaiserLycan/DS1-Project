@@ -1,0 +1,1120 @@
+﻿[Dictionary]
+Version=CSPro 7.7
+Label=SOF2023V1PUF
+Name=SOF2023V1PUF
+Note=Started January 2012
+RecordTypeStart=0
+RecordTypeLen=0
+Positions=Relative
+ZeroFill=Yes
+DecimalChar=No
+SecurityOptions=8EA9EF6A8C3BC67D4A7DD7A6FDAD5FA304CDB84D9EC29E0E246FA8244D2A53A4
+
+[Level]
+Label=Questionnaire
+Name=QUEST
+
+[IdItems]
+
+[Item]
+Label=Region
+Name=RREG
+Start=1
+Len=2
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=Region
+Name=RREG_VS1
+Value=13;National Capital Region  (NCR)
+Note=First District\r\n
+Note=~      NCR I - Manila\r\n
+Note=Second District\r\n
+Note=~      NCR II - Quezon City\r\n
+Note=~      NCR III - Mandaluyong City\r\n
+Note=~                   - Marikina City\r\n
+Note=~                   - Pasig City\r\n
+Note=~                   - San Juan\r\n
+Note=Third District\r\n
+Note=~       NCR IV - Caloocan City\r\n
+Note=~                    - Malabon City\r\n
+Note=~                    - Navotas\r\n
+Note=~                    - Valenzuela City\r\n
+Note=Fourth District\r\n
+Note=~       NCR V - Makati City\r\n
+Note=~                   - Pateros\r\n
+Note=~                   - Taguig City\r\n
+Note=~        NCV VI - Las Piñas City\r\n
+Note=~                     - Muntinlupa City\r\n
+Note=~                     - Parañaque City\r\n
+Note=~                     - Pasay City
+Value=14;Cordillera Administrative Region  (CAR)
+Note=Abra\r\n
+Note=Benguet\r\n
+Note=Ifugao\r\n
+Note=Kalinga \r\n
+Note=Apayao    \r\n
+Note=Mountain Province
+Value=1;Region I  (Ilocos Region)
+Note=Ilocos Norte\r\n
+Note=Ilocos Sur\r\n
+Note=La Union\r\n
+Note=Pangasinan
+Value=2;Region II  (Cagayan Valley)
+Note=Batanes\r\n
+Note=Cagayan \r\n
+Note=Isablela\r\n
+Note=Nueva Vizcaya\r\n
+Note=Qirino
+Value=3;Region III  (Central Luzon)
+Note=Bataan\r\n
+Note=Bulacan\r\n
+Note=Nueva Ecija\r\n
+Note=Pampanga\r\n
+Note=Tarlac\r\n
+Note=Zambales\r\n
+Note=Aurora
+Value=4;Region IV-A  (CALABARZON)
+Note=Batangas\r\n
+Note=Cavite\r\n
+Note=Laguna\r\n
+Note=Quezon\r\n
+Note=Rizal
+Value=17;MIMAROPA Region
+Note=Marinduque\r\n
+Note=Occidental Mindoro\r\n
+Note=Oriental Mindoro\r\n
+Note=Palawan\r\n
+Note=Romblon
+Value=5;Region V  (Bicol Region)
+Note=Albay\r\n
+Note=Camarines Norte\r\n
+Note=Camarines Sur\r\n
+Note=Catanduanes\r\n
+Note=Masbate\r\n
+Note=Sorsogon
+Value=6;Region VI  (Western Visayas)
+Note=Aklan\r\n
+Note=Antique\r\n
+Note=Capiz\r\n
+Note=Iloilo\r\n
+Note=Negros Occidental\r\n
+Note=Guimaras
+Value=7;Region VII  (Central Visayas)
+Note=Bohol\r\n
+Note=Cebu\r\n
+Note=Negros Oriental\r\n
+Note=Siquijor
+Value=8;Region VIII  (Eastern Visayas)
+Note=Eastern Samar\r\n
+Note=Leyte\r\n
+Note=Northern Samar\r\n
+Note=Samar (Western)\r\n
+Note=Southern Leyte\r\n
+Note=Biliran
+Value=9;Region IX  (Zamboanga Peninsula)
+Note=Isabela City\r\n
+Note=Zamboanga del Norte\r\n
+Note=Zamboanga del Sur\r\n
+Note=Zamboanga Sibugay
+Value=10;Region X  (Northern Mindanao)
+Note=Bukidnon\r\n
+Note=Camiguin\r\n
+Note=Lanao del Norte\r\n
+Note=Misamis Occidental\r\n
+Note=Misamis Oriental
+Value=11;Region XI  (Davao Region)
+Note=Davao (Davao del Norte)\r\n
+Note=Davao del Sur\r\n
+Note=Davao Oriental\r\n
+Note=Campostela Valley
+Value=12;Region XII  (SOCCSKSARGEN)
+Note=Sultan Kudarat\r\n
+Note=Cotabato City\r\n
+Note=North Cotabato\r\n
+Note=South Cotabato\r\n
+Note=Sarangani
+Value=16;Region XIII  (Caraga)
+Note=Agusan del Norte\r\n
+Note=Agusan del Sur\r\n
+Note=Surigao del Norte  \r\n
+Note=Surigao del Sur
+Value=19;Autonomous Region in Muslim Mindanao  (ARMM)
+Note=Basilan\r\n
+Note=Lanao del Sur\r\n
+Note=Maguindanao\r\n
+Note=Sulu\r\n
+Note=Tawi-tawi
+
+[ValueSet]
+Label=Area
+Name=RREG_VS2
+Value=13;National Capital Region
+Value=14 1:3 4 17 5;Luzon 1/
+Value=6:8;Visayas
+Value=9:12 16 19;Mindanao
+
+[Item]
+Label=Household Unique Sequential Number
+Name=RHHNUM
+Note=\r\n
+Note=HHNUM - is a unique household number at national level
+Start=3
+Len=6
+DataType=Numeric
+ZeroFill=Yes
+
+[Record]
+Label=SOF Member Record
+Name=SOFMEMBER
+RecordTypeValue=''
+Required=No
+MaxRecords=35
+RecordLen=130
+
+[Item]
+Label=Line number
+Name=RQ1_LNO
+Start=9
+Len=2
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=Line number
+Name=RQ1_LNO_VS1
+Value=1:35;1:35
+Value=81:98;81:98
+
+[Item]
+Label=C2 Relationship
+Name=RQ2_REL
+Start=11
+Len=2
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=C2 Relationship
+Name=RQ2_REL_VS1
+Value=1;01  Head
+Value=2;02  Wife/Spouse
+Value=3;03  Son/daughter
+Value=4;04  Brother/sister
+Value=5;05  Son-in-law/daughter-in-law
+Value=6;06  Grandson/granddaughter
+Value=7;07  Father/Mother
+Value=8;08  Other Relative
+
+[Item]
+Label=C3 Sex
+Name=RQ3_SEX
+Start=13
+Len=1
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=C3 Sex
+Name=RQ3_SEX_VS1
+Value=1;Male
+Value=2;Female
+
+[Item]
+Label=C4 Age
+Name=RQ4_AGE
+Start=14
+Len=2
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=Age 5 year
+Name=RQ4_AGE_VS1
+Value=0:14;00 - 14
+Value=15:24;15 - 24
+Value=25:29;25 - 29
+Value=30:34;30 - 34
+Value=35:39;35 - 39
+Value=40:44;40 - 44
+Value=45:98;45  and over
+Value=99;Age not reported
+
+[Item]
+Label=C5 Times left -  year ago
+Name=RQ5_TMSLEFT
+Start=16
+Len=2
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=C5 Times left -  year ago
+Name=RQ5_TMSLEFT_VS1
+Value=1:60
+
+[Item]
+Label=C6 Date left (Month)
+Name=RQ6M_DTLEFT
+Start=18
+Len=2
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=C6 Date left (Month)
+Name=RQ6M_DTLEFT_VS1
+Value=1;January
+Value=2;February
+Value=3;March
+Value=4;April
+Value=5;May
+Value=6;June
+Value=7;July
+Value=8;August
+Value=9;September
+Value=10;October
+Value=11;November
+Value=12;December
+
+[Item]
+Label=C6 Date left (Year)
+Name=RQ6Y_DTLEFT
+Start=20
+Len=4
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=C6 Date left (Year)
+Name=RQ6Y_DTLEFT_VS1
+Value=2018;2018
+Value=2019;2019
+Value=2020;2020
+Value=2021;2021
+Value=2022;2022
+Value=2023;2023
+
+[Item]
+Label=C7 Marital Status
+Name=RQ7_MSTAT
+Note=New Codes === Applicable for October 2012 Round\r\n
+Note=\r\n
+Note=1 - Single\r\n
+Note=2 - Married\r\n
+Note=3 - Widowed\r\n
+Note=4 - Divorced/Separated/Annulled\r\n
+Note=5 - Common Law / Live-in\r\n
+Note=6 - Unknown
+Start=24
+Len=1
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=C7 Marital Status
+Name=RQ7_MSTAT_VS1
+Value=1;Single
+Value=2;Married/Living Together
+Value=3;Widowed
+Value=4;Divorced/Separated
+Value=5;Annulled
+Value=6;Unknown
+
+[Item]
+Label=C8 Highest Grade Completed
+Name=RQ8_HGRADE
+Start=25
+Len=2
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=C8 Highest Grade Completed
+Name=RQ8_HGRADE_VS1
+Value=0;No Grade Completed
+Value=1;Elementary Undegraduate
+Value=2;Elementary Graduate
+Value=3;Junior High Undergraduate
+Value=4;Junior High Graduate
+Value=5;Senior High Undergraduate
+Value=6;Senior High Graduate
+Value=7;Post Secondary Undergraduate
+Value=8;Post-Secondary Non-Tertiary/Technical-Vocational Graduate
+Value=9;College Undergraduate
+Value=10;College Graduate
+Value=11;Post Baccalaureate/ Post Graduate
+
+[Item]
+Label=Usual occupation (major group)
+Name=RQ9_2DGT
+Start=27
+Len=2
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=Usual occupation (major group)
+Name=RQ9_2DGT_VS1
+Value=11:14;Managers
+Value=21:26;Professionals
+Value=31:35;Technicians and Associate Professionals
+Value=41:44;Clerical Support Workers
+Value=51:54;Service and Sales Workers
+Value=61:63;Skilled Agricultural, Forestry and Fishery Workers
+Value=71:75;Craft and Related Trades Workers
+Value=81:83;Plant and Machine Operators and Assemblers
+Value=91:96;Elementary Occupations
+Value=1:3;Armed Forces Occupations
+Value=9;Non-gainful occupations
+
+[Item]
+Label=C10 Reason for leaving
+Name=RQ10_REASON
+Start=29
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=C10 Reason for leaving
+Name=RQ10_REASON_VS1
+Value=1;Overseas Filipino Worker (OFW) with Contract
+Value=2;Other OFW with no Contract
+Value=3;Work with Philippine Embassy/Consulate Abroad
+Value=4;Tourist
+Value=5;Student
+Value=6;Immigrant
+Value=7;Official Mission
+Value=8;Others, specify
+
+[ValueSet]
+Label=Reason2
+Name=RQ10_REASON_VS2
+Value=1;Contract Workers
+Value=2 4:5 8;Non-Contract Workers
+
+[Item]
+Label=C11 Land-based or sea-based worker
+Name=RQ11_BASE
+Start=30
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=C11 Land-based or sea-based worker
+Name=RQ11_BASE_VS1
+Value=1;Land-based
+Value=2;Sea-based
+Value=3;Others
+
+[Item]
+Label=C12 Country intend to stay
+Name=RQ12_CTRY
+Start=31
+Len=3
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=C12 Country intend to stay
+Name=RQ12_CTRY_VS1
+Value=100;Africa
+Value=211:214 221:223 231:235;Asia
+Value=211:214;   East Asia
+Value=211;     Hongkong
+Value=212;     Japan
+Value=213;     Taiwan
+Value=214;     Other Countries in East Asia
+Value=221:223;  Southeast and South Central Asia
+Value=221;      Malaysia
+Value=222;      Singapore
+Value=223;      Other Countries in SE & SC Asia
+Value=231:235;  Western Asia
+Value=231;      Kuwait
+Value=232;      Qatar
+Value=233;      Saudi Arabia
+Value=234;      United Arab Emirates
+Value=235;      Other Countries in Western Asia
+Value=300;Australia
+Value=400;Europe
+Value=500;North and South America
+Note=CODE 036 (GUAM) WAS PREVIOUSLY(2008 AND BACK, MAYBE) CODED IN AUSTRALIA, NOW CORRECTLY CODED IN NORTH AND SOUTH AMERICA
+Value=600;Other Countries
+
+[Item]
+Label=C13 Expected to return
+Name=RQ13_RETURN
+Start=34
+Len=2
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=C13 Expected to return
+Name=RQ13_RETURN_VS1
+Value=0:60;No. of months
+Value=88;Not expected to return / Don't know
+
+[Item]
+Label=C14 Had a job/business anytime
+Name=RQ14_INDWORK
+Start=36
+Len=1
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=C14 Had a job/business anytime
+Name=RQ14_INDWORK_VS1
+Value=1;Yes
+Value=2;No
+
+[Item]
+Label=Kind of work abroad (major group)
+Name=RQ15_2DGT
+Start=37
+Len=2
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=Kind of work abroad (major group)
+Name=RQ15_2DGT_VS1
+Value=11:14;Managers
+Value=21:26;Professionals
+Value=31:35;Technicians and Associate Professionals
+Value=41:44;Clerical Support Workers
+Value=51:54;Service and Sales Workers
+Value=61:63;Skilled Agricultural, Forestry and Fishery Workers
+Value=71:75;Craft and Related Trades Workers
+Value=81:83;Plant and Machine Operators and Assemblers
+Value=91:96;Elementary Occupations
+Value=1:3;Armed Forces Occupations
+
+[Item]
+Label=Kind of work industry (major group)
+Name=RQ16_2DGT
+Start=39
+Len=2
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=Kind of work industry (major group)
+Name=RQ16_2DGT_VS1
+Value=1:3;AGRICULTURE
+Value=1:2;   Agriculture and Forestry
+Value=3;   Fishing and aquaculture
+Value=5:43;INDUSTRY
+Value=5:9;   Mining and Quarying
+Value=10:33;   Manufacturing
+Value=35;   Electricity, Gas, Steam and Airconditioning Supply
+Value=36:39;   Water Supply; Sewerage, Waste Management and Remediation Activities
+Value=41:43;   Construction
+Value=45:99;SERVICES
+Value=45:47;   Whosale and Retail Trade; Repair of Motor Vehicles and Motorcycles
+Value=49:53;   Transportation and Storage
+Value=55:56;   Accommodation and Food Service Activities
+Value=58:63;   Information and Communication
+Value=64:66;   Financial and Insurance Activities
+Value=68;   Real Estate Activities
+Value=69:75;   Professional, Scientific  and Technical Activities
+Value=77:82;   Administrative and Support Service Activities
+Value=84;   Public Administration and Defense; Compulsory Social Security
+Value=85;   Education
+Value=86:88;   Human Health and Social Work Activities
+Value=90:93;   Arts, Entertainment and Recreation
+Value=94:96;   Other Service Activities
+Value=97:98;   Activities of Households as Employers
+Value=99;   Activities of Extraterritorial Organizations and Bodies
+
+[ValueSet]
+Label=Kind of work industry (major group)
+Name=RQ16_2DGT_VS2
+Value=1:2;   Agriculture and Forestry
+Value=3;   Fishing and aquaculture
+Value=5:9;   Mining and Quarying
+Value=10:33;   Manufacturing
+Value=35;   Electricity, Gas, Steam and Airconditioning Supply
+Value=36:39;   Water Supply; Sewerage, Waste Management and Remediation Activities
+Value=41:43;   Construction
+Value=45:47;   Whosale and Retail Trade; Repair of Motor Vehicles and Motorcycles
+Value=49:53;   Transportation and Storage
+Value=55:56;   Accommodation and Food Service Activities
+Value=58:63;   Information and Communication
+Value=64:66;   Financial and Insurance Activities
+Value=68;   Real Estate Activities
+Value=69:75;   Professional, Scientific  and Technical Activities
+Value=77:82;   Administrative and Support Service Activities
+Value=84;   Public Administration and Defense; Compulsory Social Security
+Value=85;   Education
+Value=86:88;   Human Health and Social Work Activities
+Value=90:93;   Arts, Entertainment and Recreation
+Value=94:96;   Other Service Activities
+Value=97:98;   Activities of Households as Employers
+Value=99;   Activities of Extraterritorial Organizations and Bodies
+
+[Item]
+Label=C17 Average monthly income
+Name=RQ17_AVEMINC
+Start=41
+Len=7
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=C17 Average monthly income
+Name=RQ17_AVEMINC_VS1
+Value=0:99
+Value=100:9999998
+Value=9999999
+
+[Item]
+Label=C18 Number of months worked
+Name=RQ18_NOMONTH
+Start=48
+Len=2
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=C18 Number of months worked
+Name=RQ18_NOMONTH_VS1
+Value=0:60;No. of Months
+
+[Item]
+Label=C19 Has returned home
+Name=RQ19_RET
+Start=50
+Len=1
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=C19 Has returned home
+Name=RQ19_RET_VS1
+Value=1;Yes
+Value=2;No
+
+[Item]
+Label=C20 Date returned home (Month)
+Name=RQ20M_DTRET
+Start=51
+Len=2
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=C20 Date returned home (Month)
+Name=RQ20M_DTRET_VS1
+Value=1;January
+Value=2;February
+Value=3;March
+Value=4;April
+Value=5;May
+Value=6;June
+Value=7;July
+Value=8;August
+Value=9;September
+Value=10;October
+Value=11;November
+Value=12;December
+
+[Item]
+Label=C20 Date returned home (Year)
+Name=RQ20Y_DTRET
+Start=53
+Len=4
+DataType=Numeric
+
+[ValueSet]
+Label=C20 Date returned home (Year)
+Name=RQ20Y_DTRET_VS1
+Value=2018;2018
+Value=2019;2019
+Value=2020;2020
+Value=2021;2021
+Value=2022;2022
+Value=2023;2023
+
+[Item]
+Label=C21 Reason for returning in the country
+Name=RQ21_REASON
+Start=57
+Len=1
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=C21 Reason for returning in the country
+Name=RQ21_REASON_VS1
+Value=1;1 Visit friends and relatives
+Value=2;2 End of Contract
+Value=3;3 Repatriated due to COVID-19
+Value=4;4 Others, specify
+
+[Item]
+Label=C22 Date expected to return home (Month)
+Name=RQ22M_DTEXP
+Start=58
+Len=2
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=C22 Date expected to return home (Month)
+Name=RQ22M_DTEXP_VS1
+Value=1;January
+Value=2;February
+Value=3;March
+Value=4;April
+Value=5;May
+Value=6;June
+Value=7;July
+Value=8;August
+Value=9;September
+Value=10;October
+Value=11;November
+Value=12;December
+Value=88;Not Expected to Return
+
+[Item]
+Label=C22 Date expected to return home (Year)
+Name=RQ22Y_DTEXP
+Start=60
+Len=4
+DataType=Numeric
+
+[ValueSet]
+Label=C22 Date expected to return home (Year)
+Name=RQ22Y_DTEXP_VS1
+Value=2023;2023
+Value=2024;2024
+Value=2025;2025
+Value=2026;2026
+Value=2027;2027
+Value=2028;2028
+Value=8888;8888 Not expected to return
+
+[Item]
+Label=C23 Remittance received
+Name=RQ23_CASHREM
+Start=64
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=C23 Remittance received
+Name=RQ23_CASHREM_VS1
+Value=1;With remittance
+Value=2;No remittance
+Value=9;Not Reported
+
+[Item]
+Label=TOTAL remittance
+Name=RQ24_CASHAMT
+Start=65
+Len=8
+DataType=Numeric
+
+[ValueSet]
+Label=Cash Remittance
+Name=RQ24_CASHAMT_VS2
+Value=100:19999;Less than P20,000
+Value=20000:39999;P20,000 - P39,999
+Value=40000:99999;P40,000 - P99,999
+Value=100000:99999998;P100,000 and over
+Value=99999999;Not reported
+Value='        ';No remittance
+Name=NOTAPPL,Special
+
+[Item]
+Label=C25 Mode of remittance
+Name=RQ25_MODE
+Start=73
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=C25 Mode of remittance
+Name=RQ25_MODE_VS1
+Value=1;Bank
+Value=2;Agency / Local Office
+Value=3;Friends / Co-workers
+Value=4;Door-to-door
+Value=5;Money transfer services (Money Gram, Western Union, etc)
+Value=6;Others
+
+[Item]
+Label=C26 Remittance Spent
+Name=RQ26_REMITTANCE_SPENT
+Start=74
+Len=5
+DataType=Alpha
+
+[ValueSet]
+Label=C26 Remittance Spent
+Name=RQ26_REMITTANCE_SPENT_VS1
+Value='A    ';1 Consumptions
+Value='B    ';2 Investments
+Value='C    ';3 Savings
+Value='D    ';4 Gift / Donation
+Value='E    ';5 Others, specify
+
+[Item]
+Label=Consumptions percent
+Name=RQ261P_CONSUM
+Start=79
+Len=3
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=Consumptions percent
+Name=RQ261P_CONSUM_VS1
+Value=0:100;Consumptions Percent
+Value='   ';Not applicable
+Name=NOTAPPL,Special
+
+[Item]
+Label=Investments percent
+Name=RQ262P_INVEST
+Start=82
+Len=3
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=Investments percent
+Name=RQ262P_INVEST_VS1
+Value=0:100;Investments Percent
+Value='   ';Not applicable
+Name=NOTAPPL,Special
+
+[Item]
+Label=Savings percent
+Name=RQ263P_SAVINGS
+Start=85
+Len=3
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=Savings percent
+Name=RQ263P_SAVINGS_VS1
+Value=0:100;Savings Percent
+Value='   ';Not applicable
+Name=NOTAPPL,Special
+
+[ValueSet]
+Label=Savings percent
+Name=RQ263P_SAVINGS_VS2
+Value=1:100;with Savings
+Value=0;No Savings
+Value='   ';blank
+Name=NOTAPPL,Special
+
+[Item]
+Label=Gift/donations percent
+Name=RQ264P_GIFT
+Start=88
+Len=3
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=Gift/donations percent
+Name=RQ264P_GIFT_VS1
+Value=0:100;Gift/Donations Percent
+Value='   ';Not applicable
+Name=NOTAPPL,Special
+
+[Item]
+Label=Others percent
+Name=RQ265P_OTHERS
+Start=91
+Len=3
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=Others percent
+Name=RQ265P_OTHERS_VS1
+Value=0:100;Others Percent
+Value='   ';Not applicable
+Name=NOTAPPL,Special
+
+[Item]
+Label=C27 Return during the period April to September 2023
+Name=RQ27_RET6MOS
+Start=94
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=C27 Return during the period April to September 2023
+Name=RQ27_RET6MOS_VS1
+Value=1;Yes
+Value=2;No
+
+[Item]
+Label=C28 Cash brought home
+Name=RQ28_CASHHOME
+Start=95
+Len=7
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=C28 Cash brought home
+Name=RQ28_CASHHOME_VS1
+Value=100:9999998
+Value=9999999
+Value=0
+
+[ValueSet]
+Label=Cash brought home
+Name=RQ28_CASHHOME_VS2
+Value=100:9999998;Q26 Cash Brought Home
+
+[Item]
+Label=C29 Receive goods/products
+Name=RQ29_INKIND
+Start=102
+Len=1
+DataType=Numeric
+
+[ValueSet]
+Label=C29 Receive goods/products
+Name=RQ29_INKIND_VS1
+Value=1;Yes
+Value=2;No
+
+[Item]
+Label=C30 Total imputed value of goods/products
+Name=RQ30_KINDAMT
+Start=103
+Len=8
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=C30 Total imputed value of goods/products
+Name=RQ30_KINDAMT_VS1
+Value=0
+Value=100:99999998
+Value=99999999
+
+[Item]
+Label=Weight
+Name=RSWGT
+Start=111
+Len=10
+DataType=Numeric
+Decimal=4
+ZeroFill=Yes
+
+[Item]
+Label=Past Six Months Indicator
+Name=RP6M_IND
+Note=Published Tables are all based on Past Six Months Indicator = 1\r\n
+Note=\r\n
+Note=\r\n
+Note=\r\n
+Note=P6M_IND = 1   \r\n
+Note=\r\n
+Note=IF\r\n
+Note=~     Q10_REASON  = (1, 3:5, 8)\r\n
+Note=~             \r\n
+Note=~                                   1 = Contract \r\n
+Note=~                                   3 = Worker other than Contractual\r\n
+Note=~                                   4 = Tourist\r\n
+Note=~                                   5 =  Student\r\n
+Note=~                                   8 =  Others\r\n
+Note=\r\n
+Note=and\r\n
+Note=~   \r\n
+Note=~   Q13_INDWORK = 1               {working)\r\n
+Note=\r\n
+Note=~          A) Q16_RET = 1 AND\r\n
+Note=~               Q17_YDTRET  = Survey Year and\r\n
+Note=~               Q17_mdtret       = 04:09                  (Aprilt - September)\r\n
+Note=\r\n
+Note=~         B) Q16_RET = 2
+Start=121
+Len=1
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=Past Six Months Indicator
+Name=RP6M_IND_VS1
+Value=1;1
+Value=2;2
+
+[Item]
+Label=Survey Year
+Name=RSVYYR
+Start=122
+Len=4
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=Survey Year
+Name=RSVYYR_VS1
+Value=2023;2023
+
+[Item]
+Label=Province recode
+Name=RPRRCD
+Start=126
+Len=5
+DataType=Numeric
+ZeroFill=Yes
+
+[ValueSet]
+Label=Province recode
+Name=RPRRCD_VS1
+Value=80100 80200 80300 80400 80500 80600 80700 80800 80900 81000 81100 81200 81300 81400 81500 81600 81700;NATIONAL CAPITAL REGION  (NCR)
+Value=80500 80600 81400;     NCR 1
+Value=80600;       Manila
+Value=80500;       Mandaluyong
+Value=81400;       San Juan
+Value=80700 81300;     NCR 2
+Value=81300;       Quezon City
+Value=80700;       Marikina
+Value=80300 81200 81700 81500;     NCR 3
+Value=80300;       Makati City
+Value=81200;       Pasig City
+Value=81700;       Pateros
+Value=81500;       Taguig City
+Value=80100 80400 80900 81600;     NCR 4
+Value=80100;       Caloocan City
+Value=80400;       Malabon City
+Value=80900;       Navotas City
+Value=81600;       Valenzuela City
+Value=80200 80800 81000 81100;     NCR 5
+Value=80200;       Las Pinas
+Value=80800;       Muntinlupa
+Value=81000;       Paranaque
+Value=81100;       Pasay City
+Value=100 1100 30300 2700 3200 4400 8100;CORDILLERA ADMINISTRATIVE REGION  (CAR)
+Value=100;     Abra
+Value=1100;     Benguet
+Value=30300;     Baguio City
+Value=2700;     Ifugao
+Value=3200;     Kalinga
+Value=4400;     Mountain Province
+Value=8100;     Apayao
+Value=2800 2900 3300 5500;REGION I  (ILOCOS REGION)
+Value=2800;     Ilocos Norte
+Value=2900;     Ilocos Sur
+Value=3300;     La Union
+Value=5500;     Pangasinan
+Value=900 1500 3100 5000 5700;REGION II (CAGAYAN VALLEY)
+Value=900;     Batanes
+Value=1500;     Cagayan
+Value=3100;     Isabela
+Value=5000;     Nueva Vizcaya
+Value=5700;     Quirino
+Value=7700 800 1400 4900 5400 30100 6900 7100 31400;REGION III  (CENTRAL LUZON)
+Value=7700;     Aurora
+Value=800;     Bataan
+Value=1400;     Bulacan
+Value=4900;     Nueva Ecija
+Value=5400;     Pampanga
+Value=30100;     Angeles City
+Value=6900;     Tarlac
+Value=7100;     Zambales
+Value=31400;     Olongapo City
+Value=1000 2100 3400 5600 31200 5800;REGION IVA  CALABARZON
+Value=1000;     Batangas
+Value=2100;     Cavite
+Value=3400;     Laguna
+Value=5600;     Quezon
+Value=31200;     Lucena City
+Value=5800;     Rizal
+Value=4000 5100 5200 5300 31500 5900;MIMAROPA REGION
+Value=4000;     Marinduque
+Value=5100;     Occidental Mindoro
+Value=5200;     Oriental Mindoro
+Value=5300;     Palawan
+Value=31500;     Puerto Princesa City
+Value=5900;     Romblon
+Value=500 1600 1700 2000 4100 6200;REGION V  (BICOL REGION)
+Value=500;     Albay
+Value=1600;     Camarines Norte
+Value=1700;     Camarines Sur
+Value=2000;     Catanduanes
+Value=4100;     Masbate
+Value=6200;     Sorsogon
+Value=400 600 1900 3000 31000 4500 30200 7900;REGION VI  (WESTERN VISAYAS)
+Value=400;     Aklan
+Value=600;     Antique
+Value=1900;     Capiz
+Value=3000;     Iloilo
+Value=31000;     Iloilo City
+Value=4500;     Negros Occidental
+Value=30200;     Bacolod City
+Value=7900;     Guimaras
+Value=1200 2200 30600 31100 31300 4600 6100;REGION VII  (CENTRAL VISAYAS)
+Value=1200;     Bohol
+Value=2200;     Cebu
+Value=30600;     Cebu City
+Value=31100;     Lapulapu City
+Value=31300;     Mandaue City
+Value=4600;     Negros Oriental
+Value=6100;     Siquijor
+Value=2600 3700 31600 4800 6000 6400 7800;REGION VIII  (EASTERN VISAYAS)
+Value=2600;     Eastern Samar
+Value=3700;     Leyte
+Value=31600;     Tacloban City
+Value=4800;     Northern Samar
+Value=6000;     Samar (Western)
+Value=6400;     Southern Leyte
+Value=7800;     Biliran
+Value=7200 7300 31700 8300 90100;REGION IX  (ZAMBOANGA PENINSULA)
+Value=7200;     Zamboanga del Norte
+Value=7300;     Zamboanga del Sur
+Value=31700;     Zamboanga City
+Value=8300;     Zamboanga Sibugay
+Value=90100;     Isabela City
+Value=1300 1800 3500 30900 4200 4300 30500;REGION X  (NORTHERN MINDANAO)
+Value=1300;     Bukidnon
+Value=1800;     Camiguin
+Value=3500;     Lanao del Norte
+Value=30900;     Iligan City
+Value=4200;     Misamis Occidental
+Value=4300;     Misamis Oriental
+Value=30500;     Cagayan de Oro City
+Value=2300 2400 30700 2500 8200 8600;REGION XI  (DAVAO REGION)
+Value=2300;     Davao del Norte
+Value=2400;     Davao del Sur
+Value=30700;     Davao City
+Value=2500;     Davao Oriental
+Value=8200;     Compostela Valley
+Value=8600;     Davao Occidental
+Value=4700 6300 30800 6500 8000;REGION XII  (SOCCSKSARGEN)
+Value=4700;     North Cotabato
+Value=6300;     South Cotabato
+Value=30800;     General Santos City
+Value=6500;     Sultan Kudarat
+Value=8000;     Sarangani
+Value=200 30400 300 6700 6800 8500;REGION XIII  (CARAGA)
+Value=200;     Agusan del Norte
+Value=30400;     Butuan City
+Value=300;     Agusan del Sur
+Value=6700;     Surigao del Norte
+Value=6800;     Surigao del Sur
+Value=8500;     Dinagat Island
+Value=700 3600 8700 8703 8800 6600 7000 99900;AUTONOMOUS REGION IN MUSLIM MINDANAO (ARMM)
+Value=700;     Basilan
+Value=3600;     Lanao del Sur
+Value=8700;     Maguindanao del Norte
+Value=8703;     Cotabato City
+Value=8800;     Maguindanao del Sur
+Value=6600;     Sulu
+Value=7000;     Tawi-Tawi
+Value=99900;     BARMM63
