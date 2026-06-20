@@ -63,7 +63,22 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis">Data Analysis</a></li>
   </ul></li>
   <li><a href="#bivariate-multivariate-analysis" id="toc-bivariate-multivariate-analysis" class="nav-link" data-scroll-target="#bivariate-multivariate-analysis">Bivariate &amp; Multivariate Analysis</a></li>
-  <li><a href="#machine-learning" id="toc-machine-learning" class="nav-link" data-scroll-target="#machine-learning">Machine Learning</a></li>
+  <li><a href="#machine-learning" id="toc-machine-learning" class="nav-link" data-scroll-target="#machine-learning">Machine Learning</a>
+  <ul class="collapse">
+  <li><a href="#objective-1-predictive-remittance-modeling-regression" id="toc-objective-1-predictive-remittance-modeling-regression" class="nav-link" data-scroll-target="#objective-1-predictive-remittance-modeling-regression">OBJECTIVE 1: PREDICTIVE REMITTANCE MODELING (Regression)</a>
+  <ul class="collapse">
+  <li><a href="#data-preparation-for-remittance-prediction" id="toc-data-preparation-for-remittance-prediction" class="nav-link" data-scroll-target="#data-preparation-for-remittance-prediction">Data Preparation for Remittance Prediction</a></li>
+  <li><a href="#model-training-and-evaluation" id="toc-model-training-and-evaluation" class="nav-link" data-scroll-target="#model-training-and-evaluation">Model Training and Evaluation</a></li>
+  <li><a href="#fold-cross-validation" id="toc-fold-cross-validation" class="nav-link" data-scroll-target="#fold-cross-validation">5-Fold Cross-Validation</a></li>
+  <li><a href="#remittance-forecast-output" id="toc-remittance-forecast-output" class="nav-link" data-scroll-target="#remittance-forecast-output">Remittance Forecast Output</a></li>
+  </ul></li>
+  <li><a href="#objective-2-labor-market-gender-disparities-classification" id="toc-objective-2-labor-market-gender-disparities-classification" class="nav-link" data-scroll-target="#objective-2-labor-market-gender-disparities-classification">OBJECTIVE 2: LABOR MARKET &amp; GENDER DISPARITIES (Classification)</a>
+  <ul class="collapse">
+  <li><a href="#data-segmentation-and-cross-tabulation" id="toc-data-segmentation-and-cross-tabulation" class="nav-link" data-scroll-target="#data-segmentation-and-cross-tabulation">Data Segmentation and Cross-Tabulation</a></li>
+  <li><a href="#statistical-validation-chi-square-test-of-independence" id="toc-statistical-validation-chi-square-test-of-independence" class="nav-link" data-scroll-target="#statistical-validation-chi-square-test-of-independence">Statistical Validation: Chi-Square Test of Independence</a></li>
+  <li><a href="#quantifying-underemployment-degree-holders-in-elementary-occupations" id="toc-quantifying-underemployment-degree-holders-in-elementary-occupations" class="nav-link" data-scroll-target="#quantifying-underemployment-degree-holders-in-elementary-occupations">Quantifying Underemployment: Degree Holders in Elementary Occupations</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
@@ -116,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="data-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="data-analysis">Data Analysis</h2>
-<div id="9557f6671fecb80c" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-12T22:34:07.228139900Z&quot;,&quot;start_time&quot;:&quot;2026-06-12T22:34:06.851617200Z&quot;}}" data-execution_count="17">
+<div id="9557f6671fecb80c" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:25.042665700Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:24.917368400Z&quot;}}" data-execution_count="130">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -127,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>Figure 1 illustrates the primary reasons Filipinos leave the country. The data reveals that the overwhelming majority travel for documented employment, with ‘OFW w/ Contract’ accounting for 3,485 respondents. Tourism is the second most common reason at 601 respondents. Meanwhile, all other categories, such as traveling without a contract (90), immigration (47), and study (24), make up a very small fraction of the total volume.</p>
-<div id="9bad599ca81d916" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-12T22:34:07.746169100Z&quot;,&quot;start_time&quot;:&quot;2026-06-12T22:34:07.557212900Z&quot;}}" data-execution_count="18">
+<div id="9bad599ca81d916" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:25.646973600Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:25.353616200Z&quot;}}" data-execution_count="131">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -138,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>Figure 2 illustrates the distribution of Overseas Filipino Worker (OFW) destinations among the respondents. The data reveals a strong concentration in the Middle East, with Saudi Arabia being the leading destination by a significant margin (785 respondents). This is followed by the United Arab Emirates (456). Other major non-Middle Eastern destinations include the Americas (416) and Europe (351), while traditional Asian hubs like Hong Kong, Japan, and Singapore make up the middle tier of the distribution.</p>
-<div id="8bbe5180fe43d31" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-12T22:34:07.977707800Z&quot;,&quot;start_time&quot;:&quot;2026-06-12T22:34:07.857252200Z&quot;}}" data-execution_count="19">
+<div id="8bbe5180fe43d31" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:25.813044300Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:25.741720300Z&quot;}}" data-execution_count="132">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -149,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>Figure 3 illustrates the gender distribution of the surveyed Overseas Filipino Workers. The data indicates a notably female-majority workforce within this sample, with women comprising 58.6% of the respondents compared to 41.4% men.</p>
-<div id="90dc68c23d68e34f" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-12T22:34:08.345343900Z&quot;,&quot;start_time&quot;:&quot;2026-06-12T22:34:07.981843800Z&quot;}}" data-execution_count="20">
+<div id="90dc68c23d68e34f" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:26.064538100Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:25.823042700Z&quot;}}" data-execution_count="133">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -160,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>Figure 4 illustrates the industry distribution among the surveyed OFWs. The data reveals a heavy concentration in ‘Other Service Activities,’ which dominates the workforce at 1,567 respondents. Notably, the second-largest category is ‘Not Applicable (Unemployed)’ with 692 individuals, suggesting a significant portion of the sample may be between contracts, seeking employment, or traveling as dependents. Specific traditional sectors such as Transportation and Storage (530) and Manufacturing (358) form the next tier of the workforce.</p>
-<div id="f8e21e199402bc70" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-12T23:04:33.830093300Z&quot;,&quot;start_time&quot;:&quot;2026-06-12T23:04:32.253757300Z&quot;}}" data-execution_count="61">
+<div id="f8e21e199402bc70" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:26.563044100Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:26.068609700Z&quot;}}" data-execution_count="134">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -171,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>Figure 5 illustrates the age distribution among the surveyed OFWs. The distribution is moderately right-skewed (skewness ≈ 0.64), suggesting that while the bulk of the workforce consists of younger adults, there is a small but notable presence of older workers extending into their 80s.</p>
-<div id="c638933d85cb2ec4" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-12T23:09:55.788948400Z&quot;,&quot;start_time&quot;:&quot;2026-06-12T23:09:55.596991800Z&quot;}}" data-execution_count="65">
+<div id="c638933d85cb2ec4" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:26.711134800Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:26.566057Z&quot;}}" data-execution_count="135">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -186,16 +201,18 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="bivariate-multivariate-analysis" class="level1">
 <h1>Bivariate &amp; Multivariate Analysis</h1>
-<div id="d474cb27bcf9197" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-12T23:23:27.993260700Z&quot;,&quot;start_time&quot;:&quot;2026-06-12T23:23:27.646870100Z&quot;}}" data-execution_count="71">
+<div id="d474cb27bcf9197" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:26.992268100Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:26.714650600Z&quot;}}" data-execution_count="136">
 <div class="cell-output cell-output-display">
-<div>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Project_files/figure-html/cell-23-output-1.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 7: Distribution of Travel Reasons by Destination</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<div id="86cb3cfa7878f80d" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-12T22:34:10.113947900Z&quot;,&quot;start_time&quot;:&quot;2026-06-12T22:34:09.220510500Z&quot;}}" data-execution_count="24">
+<p>Figure 7 presents a stacked bar chart illustrating the distribution of travel reasons across different destination countries. It highlights that for most destinations, “OFW w/ Contract” is the predominant reason for leaving, reinforcing the earlier observation that the majority of Filipinos travel for documented employment. However, some destinations show a higher proportion of “Tourist” or “Immigrant” reasons, indicating variations in migration patterns depending on the country.</p>
+<div id="86cb3cfa7878f80d" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:27.233783400Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:26.995664100Z&quot;}}" data-execution_count="137">
 <div class="cell-output cell-output-stdout">
 <pre><code>sex                                                    Female        Male
 overseas_industry                                                        
@@ -222,59 +239,68 @@ Water Supply; Sewerage, Waste Management and Re...   0.000000  100.000000
 Wholesale and Retail Trade; Repair of Motor Veh...  47.402597   52.597403</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<div>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Project_files/figure-html/cell-24-output-2.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 8: Gender Distribution Across Overseas Industries</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<div id="829417666a616742" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-12T22:34:10.585169Z&quot;,&quot;start_time&quot;:&quot;2026-06-12T22:34:10.157491800Z&quot;}}" data-execution_count="25">
+<p>Figure 8 displays the gender distribution across various overseas industries. This stacked bar chart reveals significant gender disparities in certain sectors. For instance, some industries might be heavily dominated by female workers (e.g., “Other Service Activities” often includes domestic work and caregiving), while others might show a male majority (e.g., “Construction” or “Transportation and Storage”). The “Not Applicable (Unemployed)” category also shows its own gender split, which could indicate differences in employment seeking behaviors or opportunities for men and women.</p>
+<div id="829417666a616742" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:27.484220600Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:27.243783600Z&quot;}}" data-execution_count="138">
 <div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\Joseph Rey\AppData\Local\Temp\ipykernel_3704\4004741491.py:4: FutureWarning: 
+<pre><code>C:\Users\Joseph Rey\AppData\Local\Temp\ipykernel_31156\2010470079.py:5: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `y` variable to `hue` and set `legend=False` for the same effect.
 
   sns.barplot(x=country_remittance.values, y=country_remittance.index, palette='coolwarm')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<div>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Project_files/figure-html/cell-25-output-2.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 9: Median Total Remittance by Destination Country</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<div id="7cc5a757ccee6d70" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-12T22:34:12.163034Z&quot;,&quot;start_time&quot;:&quot;2026-06-12T22:34:10.810556300Z&quot;}}" data-execution_count="27">
+<p>Figure 9 illustrates the median total remittance sent by OFWs, broken down by their destination country. This bar plot highlights which countries are associated with higher or lower remittance flows. Destinations with higher median remittances could indicate better earning opportunities, higher cost of living, or stronger cultural ties encouraging more financial support to families back home. Conversely, lower median remittances might suggest less lucrative job markets or different financial priorities.</p>
+<div id="7cc5a757ccee6d70" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:28.323952400Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:27.496352300Z&quot;}}" data-execution_count="139">
 <div class="cell-output cell-output-display">
-<div>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Project_files/figure-html/cell-26-output-1.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 10: Numerical Feature Correlation Heatmap</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<div id="25089ca8a3ac36e8" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-12T22:34:12.423484Z&quot;,&quot;start_time&quot;:&quot;2026-06-12T22:34:12.211933500Z&quot;}}" data-execution_count="28">
+<p>Figure 10 presents a heatmap of the correlation matrix for all numerical features in the dataset. This visualization helps identify relationships between different quantitative variables. Strong positive correlations (values close to 1) indicate that two variables tend to increase or decrease together, while strong negative correlations (values close to -1) suggest an inverse relationship. Correlations close to 0 imply a weak linear relationship. This heatmap is crucial for understanding potential multicollinearity among features, which is important for subsequent machine learning model building, and for identifying key drivers of variables like <code>total_remittance</code> or <code>average_monthly_income</code>.</p>
+<div id="25089ca8a3ac36e8" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:28.526236500Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:28.376435900Z&quot;}}" data-execution_count="140">
 <div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\Joseph Rey\AppData\Local\Temp\ipykernel_3704\466236119.py:8: FutureWarning: 
+<pre><code>C:\Users\Joseph Rey\AppData\Local\Temp\ipykernel_31156\1510726419.py:9: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `y` variable to `hue` and set `legend=False` for the same effect.
 
   sns.barplot(x=avg_allocations.values, y=[col.replace('_', ' ').title() for col in avg_allocations.index], palette='pastel')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<div>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Project_files/figure-html/cell-27-output-2.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 11: Average Budget Allocation of Received Remittances</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<div id="77c724a88d46066b" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-12T22:34:12.706040400Z&quot;,&quot;start_time&quot;:&quot;2026-06-12T22:34:12.455323100Z&quot;}}" data-execution_count="29">
+<p>Figure 11 illustrates the average allocation of received remittances across different spending categories. This bar plot provides insight into how OFW families utilize the money sent home. It shows the percentage of remittances typically spent on consumptions, savings, investments, donations, and other categories. This breakdown is vital for understanding the economic impact of remittances on household welfare and local economies, highlighting whether the funds are primarily used for daily needs, long-term financial security, or community support.</p>
+<div id="77c724a88d46066b" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:28.722838300Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:28.542236700Z&quot;}}" data-execution_count="141">
 <div class="cell-output cell-output-display">
-<div>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Project_files/figure-html/cell-28-output-1.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 12: Overseas Deployments Count Over Time (Departure Year)</figcaption>
 </figure>
 </div>
 </div>
@@ -282,6 +308,795 @@ Passing `palette` without assigning `hue` is deprecated and will be removed in v
 </section>
 <section id="machine-learning" class="level1">
 <h1>Machine Learning</h1>
+<section id="objective-1-predictive-remittance-modeling-regression" class="level2">
+<h2 class="anchored" data-anchor-id="objective-1-predictive-remittance-modeling-regression">OBJECTIVE 1: PREDICTIVE REMITTANCE MODELING (Regression)</h2>
+<p>This section focuses on building regression models to predict the total cash remittance sent by Overseas Filipino Workers (OFWs). The models will leverage features such as the destination country, duration of work (in months), and average monthly income to forecast remittance amounts. Ensemble regression techniques, specifically Random Forest and XGBoost, will be employed and evaluated using 5-fold cross-validation.</p>
+<section id="data-preparation-for-remittance-prediction" class="level3">
+<h3 class="anchored" data-anchor-id="data-preparation-for-remittance-prediction">Data Preparation for Remittance Prediction</h3>
+<div id="fa2d8805577aae6b" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:28.830600600Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:28.799084900Z&quot;}}" data-execution_count="143">
+<div class="cell-output cell-output-stdout">
+<pre><code>Data preparation complete for Remittance Prediction.
+Shape of X_train: (2290, 3)
+Shape of y_train: (2290,)
+Shape of X_test: (573, 3)
+Shape of y_test: (573,)</code></pre>
+</div>
+</div>
+</section>
+<section id="model-training-and-evaluation" class="level3">
+<h3 class="anchored" data-anchor-id="model-training-and-evaluation">Model Training and Evaluation</h3>
+<section id="random-forest-regressor" class="level4">
+<h4 class="anchored" data-anchor-id="random-forest-regressor">Random Forest Regressor</h4>
+<div id="48797e3b4b22ec4e" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:29.048772700Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:28.834597400Z&quot;}}" data-execution_count="144">
+<div class="cell-output cell-output-stdout">
+<pre><code>Random Forest Regressor Evaluation:
+Mean Absolute Error (MAE): 51123.20
+Mean Squared Error (MSE): 6490886064.94
+Root Mean Squared Error (RMSE): 80566.04
+R-squared (R2): 0.12</code></pre>
+</div>
+</div>
+</section>
+<section id="xgboost-regressor" class="level4">
+<h4 class="anchored" data-anchor-id="xgboost-regressor">XGBoost Regressor</h4>
+<div id="7c5487548591c13" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:29.201417900Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:29.084436900Z&quot;}}" data-execution_count="145">
+<div class="cell-output cell-output-stdout">
+<pre><code>XGBoost Regressor Evaluation:
+Mean Absolute Error (MAE): 52966.86
+Mean Squared Error (MSE): 8460902217.44
+Root Mean Squared Error (RMSE): 91983.16
+R-squared (R2): -0.15</code></pre>
+</div>
+</div>
+</section>
+<section id="linear-regression" class="level4">
+<h4 class="anchored" data-anchor-id="linear-regression">Linear Regression</h4>
+<div id="fc68fbf3a86d6719" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:29.250832400Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:29.212464100Z&quot;}}" data-execution_count="146">
+<div class="cell-output cell-output-stdout">
+<pre><code>Linear Regression Evaluation:
+Mean Absolute Error (MAE): 48056.75
+Mean Squared Error (MSE): 5348230678.02
+Root Mean Squared Error (RMSE): 73131.60
+R-squared (R2): 0.27</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="fold-cross-validation" class="level3">
+<h3 class="anchored" data-anchor-id="fold-cross-validation">5-Fold Cross-Validation</h3>
+<section id="random-forest-cross-validation" class="level4">
+<h4 class="anchored" data-anchor-id="random-forest-cross-validation">Random Forest Cross-Validation</h4>
+<div id="fadd02fc750c9dce" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:33.754818500Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:29.259831700Z&quot;}}" data-execution_count="147">
+<div class="cell-output cell-output-stdout">
+<pre><code>Random Forest Cross-Validation R-squared Scores:
+[0.12639065 0.30781372 0.15039101 0.20466174 0.24928545]
+Mean CV R-squared: 0.21
+Standard Deviation of CV R-squared: 0.07</code></pre>
+</div>
+</div>
+</section>
+<section id="xgboost-cross-validation" class="level4">
+<h4 class="anchored" data-anchor-id="xgboost-cross-validation">XGBoost Cross-Validation</h4>
+<div id="6cd2334d6bb76278" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:36.685921400Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:33.819639700Z&quot;}}" data-execution_count="148">
+<div class="cell-output cell-output-stdout">
+<pre><code>XGBoost Cross-Validation R-squared Scores:
+[-0.15016763  0.22886434  0.13600629  0.14376673  0.17714561]
+Mean CV R-squared: 0.11
+Standard Deviation of CV R-squared: 0.13</code></pre>
+</div>
+</div>
+</section>
+<section id="linear-regression-cross-validation" class="level4">
+<h4 class="anchored" data-anchor-id="linear-regression-cross-validation">Linear Regression Cross-Validation</h4>
+<div id="d0832e0068a3f93e" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:39.516677900Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:36.745409400Z&quot;}}" data-execution_count="149">
+<div class="cell-output cell-output-stdout">
+<pre><code>Linear Regression Cross-Validation R-squared Scores:
+[0.27296621 0.48079582 0.26721568 0.38341372 0.3597853 ]
+Mean CV R-squared: 0.35
+Standard Deviation of CV R-squared: 0.08</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="remittance-forecast-output" class="level3">
+<h3 class="anchored" data-anchor-id="remittance-forecast-output">Remittance Forecast Output</h3>
+<p>Based on the evaluation, the model with the higher mean cross-validation R-squared score would be chosen for forecasting. For demonstration, we will use the trained XGBoost model to predict remittances for a sample input.</p>
+<p>Let’s assume we want to predict the remittance for an OFW: - Destination Country: Saudi Arabia - Number of Months Worked: 12 - Average Monthly Income: 50000 PHP</p>
+<div id="d1c96f74395ac6d2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:39.628158900Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:39.584664800Z&quot;}}" data-execution_count="150">
+<div class="cell-output cell-output-stdout">
+<pre><code>Predicted Total Cash Remittance for the sample OFW: PHP 99170.63</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="objective-2-labor-market-gender-disparities-classification" class="level2">
+<h2 class="anchored" data-anchor-id="objective-2-labor-market-gender-disparities-classification">OBJECTIVE 2: LABOR MARKET &amp; GENDER DISPARITIES (Classification)</h2>
+<p>This objective aims to analyze labor market and gender disparities among Overseas Filipino Workers (OFWs). It involves segmenting data by sex and highest educational attainment, performing cross-tabulations with overseas occupations, and using statistical tests to identify significant relationships. A key focus will be on quantifying underemployment, specifically identifying degree holders working in elementary occupations.</p>
+<section id="data-segmentation-and-cross-tabulation" class="level3">
+<h3 class="anchored" data-anchor-id="data-segmentation-and-cross-tabulation">Data Segmentation and Cross-Tabulation</h3>
+<div id="8dd6c7acca5fc725" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:39.696669200Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:39.630160500Z&quot;}}" data-execution_count="151">
+<div class="cell-output cell-output-stdout">
+<pre><code>Cross-Tabulation: Gender vs. Overseas Industry
+
+overseas_industry  Accommodation and Food Service Activities  \
+sex                                                            
+Female                                                    98   
+Male                                                     162   
+
+overseas_industry  Administrative and Support Service Activities  \
+sex                                                                
+Female                                                        45   
+Male                                                          32   
+
+overseas_industry  Agriculture and Forestry  \
+sex                                           
+Female                                   15   
+Male                                     25   
+
+overseas_industry  Arts, Entertainment and Recreation  Construction  \
+sex                                                                   
+Female                                              6            10   
+Male                                                7           183   
+
+overseas_industry  Education  \
+sex                            
+Female                    52   
+Male                      15   
+
+overseas_industry  Electricity, Gas, Steam and Air Conditioning Supply  \
+sex                                                                      
+Female                                                             0     
+Male                                                              13     
+
+overseas_industry  Financial and Insurance Activities  \
+sex                                                     
+Female                                              7   
+Male                                                4   
+
+overseas_industry  Fishing and Aquaculture  \
+sex                                          
+Female                                   0   
+Male                                    29   
+
+overseas_industry  Human Health and Social Work Activities  \
+sex                                                          
+Female                                                 153   
+Male                                                    53   
+
+overseas_industry  Information and Communication  Manufacturing  \
+sex                                                               
+Female                                        10             85   
+Male                                          22            273   
+
+overseas_industry  Mining and Quarrying  Other Service Activities  \
+sex                                                                 
+Female                                1                      1494   
+Male                                  5                        73   
+
+overseas_industry  Professional, Scientific, and Technical Activities  \
+sex                                                                     
+Female                                                            17    
+Male                                                              18    
+
+overseas_industry  Public Administration and Defense; Compulsory Social Security  \
+sex                                                                                
+Female                                                             2               
+Male                                                              11               
+
+overseas_industry  Real Estate Activities  Transportation and Storage  \
+sex                                                                     
+Female                                  4                          23   
+Male                                    1                         507   
+
+overseas_industry  Water Supply; Sewerage, Waste Management and Remediation Activities  \
+sex                                                                                      
+Female                                                             0                     
+Male                                                               3                     
+
+overseas_industry  Wholesale and Retail Trade; Repair of Motor Vehicles and Motorcycles  
+sex                                                                                      
+Female                                                            73                     
+Male                                                              81                     
+
+======================================================================
+
+Cross-Tabulation: Highest Grade Completed vs. Overseas Industry
+
+overseas_industry             Accommodation and Food Service Activities  \
+highest_grade_completed                                                   
+College graduate                                                    123   
+College undergraduate                                                43   
+Elementary graduate                                                   3   
+Elementary undergraduate                                              1   
+Junior high graduate                                                 69   
+Junior high undergraduate                                             4   
+None                                                                  0   
+Post graduate                                                         1   
+Post secondary graduate                                              15   
+Post secondary undergraduate                                          0   
+Senior high graduate                                                  1   
+
+overseas_industry             Administrative and Support Service Activities  \
+highest_grade_completed                                                       
+College graduate                                                         37   
+College undergraduate                                                    15   
+Elementary graduate                                                       0   
+Elementary undergraduate                                                  0   
+Junior high graduate                                                     20   
+Junior high undergraduate                                                 2   
+None                                                                      0   
+Post graduate                                                             0   
+Post secondary graduate                                                   3   
+Post secondary undergraduate                                              0   
+Senior high graduate                                                      0   
+
+overseas_industry             Agriculture and Forestry  \
+highest_grade_completed                                  
+College graduate                                    17   
+College undergraduate                                4   
+Elementary graduate                                  3   
+Elementary undergraduate                             1   
+Junior high graduate                                11   
+Junior high undergraduate                            1   
+None                                                 0   
+Post graduate                                        0   
+Post secondary graduate                              2   
+Post secondary undergraduate                         0   
+Senior high graduate                                 1   
+
+overseas_industry             Arts, Entertainment and Recreation  \
+highest_grade_completed                                            
+College graduate                                               7   
+College undergraduate                                          2   
+Elementary graduate                                            0   
+Elementary undergraduate                                       0   
+Junior high graduate                                           3   
+Junior high undergraduate                                      0   
+None                                                           0   
+Post graduate                                                  0   
+Post secondary graduate                                        1   
+Post secondary undergraduate                                   0   
+Senior high graduate                                           0   
+
+overseas_industry             Construction  Education  \
+highest_grade_completed                                 
+College graduate                        72         59   
+College undergraduate                   22          3   
+Elementary graduate                      6          0   
+Elementary undergraduate                 4          0   
+Junior high graduate                    64          0   
+Junior high undergraduate                3          0   
+None                                     0          0   
+Post graduate                            3          5   
+Post secondary graduate                 18          0   
+Post secondary undergraduate             0          0   
+Senior high graduate                     1          0   
+
+overseas_industry             Electricity, Gas, Steam and Air Conditioning Supply  \
+highest_grade_completed                                                             
+College graduate                                                              7     
+College undergraduate                                                         1     
+Elementary graduate                                                           0     
+Elementary undergraduate                                                      0     
+Junior high graduate                                                          4     
+Junior high undergraduate                                                     0     
+None                                                                          0     
+Post graduate                                                                 0     
+Post secondary graduate                                                       1     
+Post secondary undergraduate                                                  0     
+Senior high graduate                                                          0     
+
+overseas_industry             Financial and Insurance Activities  \
+highest_grade_completed                                            
+College graduate                                               9   
+College undergraduate                                          0   
+Elementary graduate                                            0   
+Elementary undergraduate                                       0   
+Junior high graduate                                           0   
+Junior high undergraduate                                      0   
+None                                                           0   
+Post graduate                                                  0   
+Post secondary graduate                                        2   
+Post secondary undergraduate                                   0   
+Senior high graduate                                           0   
+
+overseas_industry             Fishing and Aquaculture  \
+highest_grade_completed                                 
+College graduate                                   17   
+College undergraduate                               0   
+Elementary graduate                                 1   
+Elementary undergraduate                            0   
+Junior high graduate                                9   
+Junior high undergraduate                           1   
+None                                                0   
+Post graduate                                       0   
+Post secondary graduate                             1   
+Post secondary undergraduate                        0   
+Senior high graduate                                0   
+
+overseas_industry             Human Health and Social Work Activities  \
+highest_grade_completed                                                 
+College graduate                                                  153   
+College undergraduate                                              12   
+Elementary graduate                                                 1   
+Elementary undergraduate                                            0   
+Junior high graduate                                               22   
+Junior high undergraduate                                           0   
+None                                                                0   
+Post graduate                                                       5   
+Post secondary graduate                                            13   
+Post secondary undergraduate                                        0   
+Senior high graduate                                                0   
+
+overseas_industry             Information and Communication  Manufacturing  \
+highest_grade_completed                                                      
+College graduate                                         24            137   
+College undergraduate                                     1             54   
+Elementary graduate                                       1              8   
+Elementary undergraduate                                  0              0   
+Junior high graduate                                      0            116   
+Junior high undergraduate                                 0              3   
+None                                                      0              0   
+Post graduate                                             1              2   
+Post secondary graduate                                   5             36   
+Post secondary undergraduate                              0              0   
+Senior high graduate                                      0              2   
+
+overseas_industry             Mining and Quarrying  Other Service Activities  \
+highest_grade_completed                                                        
+College graduate                                 1                       257   
+College undergraduate                            3                       228   
+Elementary graduate                              0                        66   
+Elementary undergraduate                         0                        29   
+Junior high graduate                             2                       735   
+Junior high undergraduate                        0                       156   
+None                                             0                         3   
+Post graduate                                    0                         0   
+Post secondary graduate                          0                        91   
+Post secondary undergraduate                     0                         2   
+Senior high graduate                             0                         0   
+
+overseas_industry             Professional, Scientific, and Technical Activities  \
+highest_grade_completed                                                            
+College graduate                                                             22    
+College undergraduate                                                         4    
+Elementary graduate                                                           0    
+Elementary undergraduate                                                      0    
+Junior high graduate                                                          4    
+Junior high undergraduate                                                     0    
+None                                                                          0    
+Post graduate                                                                 0    
+Post secondary graduate                                                       5    
+Post secondary undergraduate                                                  0    
+Senior high graduate                                                          0    
+
+overseas_industry             Public Administration and Defense; Compulsory Social Security  \
+highest_grade_completed                                                                       
+College graduate                                                              8               
+College undergraduate                                                         4               
+Elementary graduate                                                           0               
+Elementary undergraduate                                                      0               
+Junior high graduate                                                          1               
+Junior high undergraduate                                                     0               
+None                                                                          0               
+Post graduate                                                                 0               
+Post secondary graduate                                                       0               
+Post secondary undergraduate                                                  0               
+Senior high graduate                                                          0               
+
+overseas_industry             Real Estate Activities  \
+highest_grade_completed                                
+College graduate                                   4   
+College undergraduate                              1   
+Elementary graduate                                0   
+Elementary undergraduate                           0   
+Junior high graduate                               0   
+Junior high undergraduate                          0   
+None                                               0   
+Post graduate                                      0   
+Post secondary graduate                            0   
+Post secondary undergraduate                       0   
+Senior high graduate                               0   
+
+overseas_industry             Transportation and Storage  \
+highest_grade_completed                                    
+College graduate                                     425   
+College undergraduate                                 27   
+Elementary graduate                                    2   
+Elementary undergraduate                               0   
+Junior high graduate                                  41   
+Junior high undergraduate                              2   
+None                                                   0   
+Post graduate                                          0   
+Post secondary graduate                               32   
+Post secondary undergraduate                           0   
+Senior high graduate                                   1   
+
+overseas_industry             Water Supply; Sewerage, Waste Management and Remediation Activities  \
+highest_grade_completed                                                                             
+College graduate                                                              2                     
+College undergraduate                                                         1                     
+Elementary graduate                                                           0                     
+Elementary undergraduate                                                      0                     
+Junior high graduate                                                          0                     
+Junior high undergraduate                                                     0                     
+None                                                                          0                     
+Post graduate                                                                 0                     
+Post secondary graduate                                                       0                     
+Post secondary undergraduate                                                  0                     
+Senior high graduate                                                          0                     
+
+overseas_industry             Wholesale and Retail Trade; Repair of Motor Vehicles and Motorcycles  
+highest_grade_completed                                                                             
+College graduate                                                             59                     
+College undergraduate                                                        28                     
+Elementary graduate                                                           2                     
+Elementary undergraduate                                                      1                     
+Junior high graduate                                                         43                     
+Junior high undergraduate                                                     3                     
+None                                                                          1                     
+Post graduate                                                                 0                     
+Post secondary graduate                                                      16                     
+Post secondary undergraduate                                                  0                     
+Senior high graduate                                                          1                     
+
+======================================================================
+</code></pre>
+</div>
+</div>
+</section>
+<section id="statistical-validation-chi-square-test-of-independence" class="level3">
+<h3 class="anchored" data-anchor-id="statistical-validation-chi-square-test-of-independence">Statistical Validation: Chi-Square Test of Independence</h3>
+<p>The Chi-Square Test of Independence will be used to determine if there is a significant relationship between categorical variables (e.g., sex and overseas industry, or education level and overseas industry). A p-value less than 0.05 typically indicates a statistically significant relationship.</p>
+<section id="chi-square-test-gender-vs.-overseas-industry" class="level4">
+<h4 class="anchored" data-anchor-id="chi-square-test-gender-vs.-overseas-industry">Chi-Square Test: Gender vs.&nbsp;Overseas Industry</h4>
+<div id="9075b04da716405d" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:39.724093100Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:39.699674900Z&quot;}}" data-execution_count="152">
+<div class="cell-output cell-output-stdout">
+<pre><code>Chi-Square Test: Gender vs. Overseas Industry
+Chi-Square Statistic: 2096.55
+P-value: 0.000
+Degrees of Freedom: 19
+Conclusion: There is a statistically significant relationship between Gender and Overseas Industry.
+
+======================================================================
+</code></pre>
+</div>
+</div>
+</section>
+<section id="chi-square-test-highest-grade-completed-vs.-overseas-industry" class="level4">
+<h4 class="anchored" data-anchor-id="chi-square-test-highest-grade-completed-vs.-overseas-industry">Chi-Square Test: Highest Grade Completed vs.&nbsp;Overseas Industry</h4>
+<div id="43c010bc3150f43d" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:39.739010200Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:39.727092600Z&quot;}}" data-execution_count="153">
+<div class="cell-output cell-output-stdout">
+<pre><code>Chi-Square Test: Highest Grade Completed vs. Overseas Industry
+Chi-Square Statistic: 1319.10
+P-value: 0.000
+Degrees of Freedom: 190
+Conclusion: There is a statistically significant relationship between Highest Grade Completed and Overseas Industry.
+
+======================================================================
+</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="quantifying-underemployment-degree-holders-in-elementary-occupations" class="level3">
+<h3 class="anchored" data-anchor-id="quantifying-underemployment-degree-holders-in-elementary-occupations">Quantifying Underemployment: Degree Holders in Elementary Occupations</h3>
+<p>This analysis identifies OFWs who possess a college degree or higher but are employed in elementary occupations, which are typically considered low-skilled. This helps to quantify the “brain drain” or underemployment among highly educated workers.</p>
+<div id="c0b4a2d7b175e091" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T00:49:39.800677700Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T00:49:39.765725500Z&quot;}}" data-execution_count="154">
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of Degree Holders in Elementary Occupations: 0
+Total Number of Degree Holders (who worked overseas): 1910
+Percentage of Degree Holders in Elementary Occupations: 0.00%
+
+No sample of underemployed individuals to display.</code></pre>
+</div>
+</div>
+<div id="7df9e9fb9f06b158" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2026-06-20T01:04:11.544820500Z&quot;,&quot;start_time&quot;:&quot;2026-06-20T01:04:11.465708100Z&quot;}}" data-execution_count="155">
+<div class="cell-output cell-output-display" data-execution_count="155">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">region</th>
+<th data-quarto-table-cell-role="th">household_unique_sequential_number</th>
+<th data-quarto-table-cell-role="th">line_number</th>
+<th data-quarto-table-cell-role="th">relationship</th>
+<th data-quarto-table-cell-role="th">sex</th>
+<th data-quarto-table-cell-role="th">age</th>
+<th data-quarto-table-cell-role="th">times_left_year_ago</th>
+<th data-quarto-table-cell-role="th">left_month</th>
+<th data-quarto-table-cell-role="th">left_year</th>
+<th data-quarto-table-cell-role="th">marital_status</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">total_imputed_value</th>
+<th data-quarto-table-cell-role="th">weight</th>
+<th data-quarto-table-cell-role="th">past_six_month_indicator</th>
+<th data-quarto-table-cell-role="th">survey_year</th>
+<th data-quarto-table-cell-role="th">province_code</th>
+<th data-quarto-table-cell-role="th">spent_consumptions</th>
+<th data-quarto-table-cell-role="th">spent_investments</th>
+<th data-quarto-table-cell-role="th">spent_savings</th>
+<th data-quarto-table-cell-role="th">spent_donations</th>
+<th data-quarto-table-cell-role="th">spent_other</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Ilocos</td>
+<td>1</td>
+<td>81</td>
+<td>Other relative</td>
+<td>Male</td>
+<td>65</td>
+<td>1</td>
+<td>Mar</td>
+<td>2023</td>
+<td>Married</td>
+<td>...</td>
+<td>55000.0</td>
+<td>463.1271</td>
+<td>0</td>
+<td>2023</td>
+<td>Ilocos Norte</td>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>Ilocos</td>
+<td>1</td>
+<td>82</td>
+<td>Other relative</td>
+<td>Female</td>
+<td>72</td>
+<td>1</td>
+<td>Mar</td>
+<td>2023</td>
+<td>Married</td>
+<td>...</td>
+<td>0.0</td>
+<td>463.1271</td>
+<td>0</td>
+<td>2023</td>
+<td>Ilocos Norte</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>Ilocos</td>
+<td>1</td>
+<td>83</td>
+<td>Other relative</td>
+<td>Female</td>
+<td>30</td>
+<td>1</td>
+<td>Mar</td>
+<td>2023</td>
+<td>Single</td>
+<td>...</td>
+<td>0.0</td>
+<td>463.1271</td>
+<td>0</td>
+<td>2023</td>
+<td>Ilocos Norte</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>Ilocos</td>
+<td>2</td>
+<td>4</td>
+<td>Child</td>
+<td>Female</td>
+<td>42</td>
+<td>2</td>
+<td>Sep</td>
+<td>2023</td>
+<td>Widowed</td>
+<td>...</td>
+<td>30000.0</td>
+<td>456.8271</td>
+<td>1</td>
+<td>2023</td>
+<td>Ilocos Norte</td>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>Ilocos</td>
+<td>3</td>
+<td>2</td>
+<td>Spouse</td>
+<td>Female</td>
+<td>43</td>
+<td>1</td>
+<td>Apr</td>
+<td>2023</td>
+<td>Married</td>
+<td>...</td>
+<td>0.0</td>
+<td>456.8271</td>
+<td>1</td>
+<td>2023</td>
+<td>Ilocos Norte</td>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4299</th>
+<td>ARMM</td>
+<td>3697</td>
+<td>2</td>
+<td>Spouse</td>
+<td>Female</td>
+<td>29</td>
+<td>1</td>
+<td>Jun</td>
+<td>2019</td>
+<td>Married</td>
+<td>...</td>
+<td>0.0</td>
+<td>294.8777</td>
+<td>1</td>
+<td>2023</td>
+<td>BARMM63</td>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">4300</th>
+<td>ARMM</td>
+<td>3698</td>
+<td>2</td>
+<td>Spouse</td>
+<td>Female</td>
+<td>38</td>
+<td>2</td>
+<td>Oct</td>
+<td>2022</td>
+<td>Married</td>
+<td>...</td>
+<td>0.0</td>
+<td>382.1495</td>
+<td>1</td>
+<td>2023</td>
+<td>BARMM63</td>
+<td>True</td>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4301</th>
+<td>ARMM</td>
+<td>3699</td>
+<td>2</td>
+<td>Spouse</td>
+<td>Female</td>
+<td>48</td>
+<td>2</td>
+<td>May</td>
+<td>2021</td>
+<td>Married</td>
+<td>...</td>
+<td>0.0</td>
+<td>345.1758</td>
+<td>1</td>
+<td>2023</td>
+<td>BARMM63</td>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">4302</th>
+<td>ARMM</td>
+<td>3700</td>
+<td>2</td>
+<td>Spouse</td>
+<td>Female</td>
+<td>23</td>
+<td>1</td>
+<td>Mar</td>
+<td>2019</td>
+<td>Married</td>
+<td>...</td>
+<td>17000.0</td>
+<td>294.2764</td>
+<td>1</td>
+<td>2023</td>
+<td>BARMM63</td>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4303</th>
+<td>ARMM</td>
+<td>3701</td>
+<td>2</td>
+<td>Child</td>
+<td>Female</td>
+<td>33</td>
+<td>1</td>
+<td>Oct</td>
+<td>2018</td>
+<td>Single</td>
+<td>...</td>
+<td>0.0</td>
+<td>157.0417</td>
+<td>1</td>
+<td>2023</td>
+<td>BARMM63</td>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+
+<p>4304 rows × 49 columns</p>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 
 </main>
