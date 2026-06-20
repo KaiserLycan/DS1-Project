@@ -3,3 +3,5 @@
 /models
 /.venv
 /.idea
+/.quarto/
+**/*.quarto_ipynb
